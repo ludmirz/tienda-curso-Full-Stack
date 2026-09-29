@@ -1,140 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tiena DELB</title>
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container mt-4">
-            <h1 class="card-title mb-4 text-center text-danger">Tienda DELB</h1>
-            <p class="lead text-center">Bienvenido a nuestra tienda online.
-                Aquí encontrarás una amplia variedad
-                de productos de alta calidad a precios competitivos.
-                <br> Explora nuestras categorías y descubre ofertas exclusivas.
-            </p>
-            <div class="container text-center mt-4 mb-4 shadow p-3 rounded-4">
-                <div class="row align-items-center">
-                    <!-- Producto 1 -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card" style="width: 18rem; margin: 0 auto;">
-                            <img src="images/hamburguesa.png" class="card-img-top" alt="Hamburguesa">
-                            <div class="card-body">
-                                <h5 class="card-title">Hamburguesa</h5>
-                                <p class="card-text">Una deliciosa hamburguesa con carne de res, lechuga, tomate y salsa especial.</p>
-                                <h4 class="text-danger fw-bold mb-3">$12.000</h4>
-                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#hamburguesaModal">Ver detalles</button>
-                                <button class="btn btn-danger btn-sm me-2">Agregar al carrito</button>
-                            </div>
-                        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiena DELB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <!-- Logo provisional: círculo blanco -->
+                <span class="d-inline-block rounded-circle bg-white" style="width: 36px; height: 36px;"
+                    aria-label="Logo provisional"></span>
+                <span class="fw-bold">Tienda DELB</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="categorias.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menú
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categorias.html#pizzas">Pizzas</a></li>
+                            <li><a class="dropdown-item" href="categorias.html#hamburguesas">Hamburguesas</a></li>
+                            <li><a class="dropdown-item" href="categorias.html#pastas">Pastas</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item fw-bold text-danger" href="categorias.html">Ver todas las
+                                    categorías</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="card-title mb-4 text-center text-danger">Tienda DELB</h1>
+        <p class="lead text-center">Bienvenido a nuestra tienda online.
+            Aquí encontrarás una amplia variedad
+            de productos de alta calidad a precios competitivos.
+            <br> Explora nuestras categorías y descubre ofertas exclusivas.
+        </p>
+
+        <!-- Carrusel de Productos -->
+        <div id="carouselExampleDark" class="carousel carousel-dark slide my-4 shadow rounded-4 overflow-hidden"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="images/hamburguesa.png" class="d-block w-100" alt="Hamburguesa">
+                    <div class="carousel-caption d-none d-md-block bg-white bg-opacity-75 rounded-3 p-3 shadow-sm">
+                        <h5 class="fw-bold text-danger">Hamburguesa</h5>
+                        <p class="mb-0 text-dark">Una deliciosa hamburguesa con carne de res, lechuga, tomate y salsa
+                            especial.</p>
                     </div>
-                    <!-- Producto 2 -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card" style="width: 18rem; margin: 0 auto;">
-                            <img src="images/pizza.jpg" class="card-img-top" alt="Pizza">
-                            <div class="card-body">
-                                <h5 class="card-title">Pizza</h5>
-                                <p class="card-text">Una deliciosa pizza con ingredientes frescos y salsa especial.</p>
-                                <h4 class="text-danger fw-bold mb-3">$10.500</h4>
-                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#pizzaModal">Ver detalles</button>
-                                <button class="btn btn-danger btn-sm me-2">Agregar al carrito</button>
-                            </div>
-                        </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="images/pizza.jpg" class="d-block w-100" alt="Pizza">
+                    <div class="carousel-caption d-none d-md-block bg-white bg-opacity-75 rounded-3 p-3 shadow-sm">
+                        <h5 class="fw-bold text-danger">Pizza</h5>
+                        <p class="mb-0 text-dark">Una deliciosa pizza con ingredientes frescos y salsa especial.</p>
                     </div>
-                    <!-- Producto 3 -->
-                    <div class="col-12 col-md-4 mb-4">
-                        <div class="card" style="width: 18rem; margin: 0 auto;">
-                            <img src="images/pasta.jpg" class="card-img-top" alt="Pasta">
-                            <div class="card-body">
-                                <h5 class="card-title">Pasta</h5>
-                                <p class="card-text">Una deliciosa pasta con ingredientes frescos y salsa especial.</p>
-                                <h4 class="text-danger fw-bold mb-3">$9.000</h4>
-                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal" data-bs-target="#pastaModal">Ver detalles</button>
-                                <button class="btn btn-danger btn-sm me-2">Agregar al carrito</button>
-                            </div>
-                        </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/pasta.jpg" class="d-block w-100" alt="Pasta">
+                    <div class="carousel-caption d-none d-md-block bg-white bg-opacity-75 rounded-3 p-3 shadow-sm">
+                        <h5 class="fw-bold text-danger">Pasta</h5>
+                        <p class="mb-0 text-dark">Una deliciosa pasta con ingredientes frescos y salsa especial.</p>
                     </div>
                 </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <!-- Modales -->
-        <div class="modal fade" id="hamburguesaModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Hamburguesa Clásica</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" class="img-fluid rounded mb-3" alt="Hamburguesa">
-                        <p>Nuestra hamburguesa clásica lleva 180g de carne vacuna a la parrilla, queso cheddar derretido,
-                            lechuga fresca, tomate, cebolla y una salsa especial de la casa, todo dentro de un pan brioche tostado.</p>
-                        <p><strong>Precio:</strong> $12.000</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-danger">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade" id="pizzaModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Pizza Margarita</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" class="img-fluid rounded mb-3" alt="Pizza">
-                        <p>Nuestra pizza Margarita está hecha con una base de masa artesanal, salsa de tomate casera,
-                            mozzarella fresca y albahaca, horneada a la perfección para un sabor auténtico.</p>
-                        <p><strong>Precio:</strong> $10.500</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-danger">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade" id="pastaModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Pasta Alfredo</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="images/pasta-2.png" class="img-fluid rounded mb-3" alt="Pasta">
-                        <p>Nuestra pasta Alfredo está hecha con fettuccine al dente, una cremosa salsa Alfredo
-                            elaborada con mantequilla, crema y queso parmesano, decorada con perejil fresco.</p>
-                        <p><strong>Precio:</strong> $9.000</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-danger">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="bg-danger text-white text-center py-4 mt-5">
-            <div class="container">
-                <h5 class="text-white mb-1">Tienda Delb</h5>
-                <p class="mb-2">La mejor calidad y sabor, directo a tu mesa.</p>
-                <small class="text-white-50">
-                    &copy; 2026 Grupo 1 Damián y Ludmila 
-                </small>
-            </div>
-        </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    </body>
+
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-danger text-white text-center py-4 mt-5">
+        <div class="container">
+            <h5 class="text-white mb-1">Tienda Delb</h5>
+            <p class="mb-2">La mejor calidad y sabor, directo a tu mesa.</p>
+            <small class="text-white-50">
+                &copy; 2026 Grupo 1 Damián y Ludmila
+            </small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

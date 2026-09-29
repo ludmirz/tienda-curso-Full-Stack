@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías - Tienda DELB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <!-- Logo provisional: círculo blanco -->
+                <span class="d-inline-block rounded-circle bg-white" style="width: 36px; height: 36px;"
+                    aria-label="Logo provisional"></span>
+                <span class="fw-bold">Tienda DELB</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Menú
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#pizzas">Pizzas</a></li>
+                            <li><a class="dropdown-item" href="#hamburguesas">Hamburguesas</a></li>
+                            <li><a class="dropdown-item" href="#pastas">Pastas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal de categorías -->
+    <main class="container my-5">
+        <header class="text-center mb-5">
+            <h1 class="display-5 fw-bold text-danger">Nuestro Menú</h1>
+            <p class="lead text-muted">Explora nuestra selección gastronómica con la mejor calidad y frescura.</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap mt-3">
+                <a href="#pizzas" class="btn btn-outline-danger rounded-pill px-4">Pizzas</a>
+                <a href="#hamburguesas" class="btn btn-outline-danger rounded-pill px-4">Hamburguesas</a>
+                <a href="#pastas" class="btn btn-outline-danger rounded-pill px-4">Pastas</a>
+            </div>
+        </header>
+
+        <!-- ============================================== -->
+        <!-- CATEGORÍA 1: PIZZAS                           -->
+        <!-- ============================================== -->
+        <section id="pizzas" class="mb-5 pt-3">
+            <div class="d-flex align-items-center mb-4 border-bottom border-danger pb-2">
+                <h2 class="text-danger fw-bold mb-0">Pizzas Artesanales</h2>
+                <span class="badge bg-danger ms-3">3 Variedades</span>
+            </div>
+            <div class="row g-4">
+                <!-- Pizza 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pizza.jpg" class="card-img-top" alt="Pizza Margarita">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Pizza Margarita</h5>
+                            <p class="card-text text-muted flex-grow-1">Una deliciosa pizza con salsa de tomate casera,
+                                mozzarella fresca y albahaca.</p>
+                            <h4 class="text-danger fw-bold my-3">$10.500</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pizzaModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pizza-fugazzeta.jpeg" class="card-img-top" alt="Pizza Fugazzeta">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Pizza Fugazzeta</h5>
+                            <p class="card-text text-muted flex-grow-1">Rellena de abundante queso mozzarella y cubierta
+                                con finas cebollas salteadas y orégano.</p>
+                            <h4 class="text-danger fw-bold my-3">$11.800</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pizzaFugazzetaModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pizza 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pizza-salame.jpeg" class="card-img-top" alt="Pizza de Salame">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Pizza de Salame</h5>
+                            <p class="card-text text-muted flex-grow-1">Pizza con abundante mozzarella y rodajas
+                                generosas de salame.</p>
+                            <h4 class="text-danger fw-bold my-3">$12.500</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pizzaSalameModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- CATEGORÍA 2: HAMBURGUESAS                     -->
+        <!-- ============================================== -->
+        <section id="hamburguesas" class="mb-5 pt-3">
+            <div class="d-flex align-items-center mb-4 border-bottom border-danger pb-2">
+                <h2 class="text-danger fw-bold mb-0">Hamburguesas Gourmet</h2>
+                <span class="badge bg-danger ms-3">3 Variedades</span>
+            </div>
+            <div class="row g-4">
+                <!-- Hamburguesa 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/hamburguesa-simple.jpeg" class="card-img-top" alt="Hamburguesa Simple">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Hamburguesa Simple</h5>
+                            <p class="card-text text-muted flex-grow-1">Medallón de carne vacuna a la plancha con lechuga fresca, rodajas de tomate y queso derretido.</p>
+                            <h4 class="text-danger fw-bold my-3">$11.000</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#hamburguesaSimpleModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hamburguesa 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/hamburguesa-doble.jpeg" class="card-img-top" alt="Hamburguesa Doble Cheddar">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Hamburguesa Doble</h5>
+                            <p class="card-text text-muted flex-grow-1">Doble medallón de 120g con cuádruple cheddar fundido y panceta crocante.</p>
+                            <h4 class="text-danger fw-bold my-3">$14.500</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#hamburguesaDobleModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hamburguesa 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/hamburguesa.png" class="card-img-top" alt="Hamburguesa Clásica Especial">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Hamburguesa Especial</h5>
+                            <p class="card-text text-muted flex-grow-1">Carne vacuna a la parrilla, queso cheddar, cebolla caramelizada, lechuga y salsa de la casa.</p>
+                            <h4 class="text-danger fw-bold my-3">$12.500</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#hamburguesaModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- CATEGORÍA 3: PASTAS                           -->
+        <!-- ============================================== -->
+        <section id="pastas" class="mb-5 pt-3">
+            <div class="d-flex align-items-center mb-4 border-bottom border-danger pb-2">
+                <h2 class="text-danger fw-bold mb-0">Pastas Caseras</h2>
+                <span class="badge bg-danger ms-3">3 Variedades</span>
+            </div>
+            <div class="row g-4">
+                <!-- Pasta 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pasta-ñoquis.jpeg" class="card-img-top" alt="Ñoquis Caseros">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Ñoquis Caseros</h5>
+                            <p class="card-text text-muted flex-grow-1">Tiernos ñoquis de papa artesanales servidos con clásica salsa pomodoro casera y queso rallado.</p>
+                            <h4 class="text-danger fw-bold my-3">$9.500</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pastaNoquisModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pasta 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pasta-ravioles.jpeg" class="card-img-top" alt="Ravioles Caseros">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Ravioles Caseros</h5>
+                            <p class="card-text text-muted flex-grow-1">Ravioles caseros rellenos de ricota y verdura fresca acompañados con salsa pomodoro tradicional.</p>
+                            <h4 class="text-danger fw-bold my-3">$9.800</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pastaRaviolesModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pasta 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm rounded-3">
+                        <img src="images/pasta.jpg" class="card-img-top" alt="Pasta Alfredo">
+                        <div class="card-body d-flex flex-column text-center">
+                            <h5 class="card-title fw-bold">Pasta Alfredo</h5>
+                            <p class="card-text text-muted flex-grow-1">Fettuccine con salsa Alfredo cremosa, manteca, queso parmesano y perejil fresco.</p>
+                            <h4 class="text-danger fw-bold my-3">$9.000</h4>
+                            <div class="mt-auto">
+                                <button class="btn btn-outline-danger btn-sm me-2" data-bs-toggle="modal"
+                                    data-bs-target="#pastaModal">Ver detalles</button>
+                                <button class="btn btn-danger btn-sm">Agregar al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================================== -->
+    <!-- MODALES DE PRODUCTOS                           -->
+    <!-- ============================================== -->
+
+    <!-- Modales Pizzas -->
+    <div class="modal fade" id="pizzaModal" tabindex="-1" aria-labelledby="pizzaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pizzaModalLabel">Pizza Margarita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pizza.jpg" class="img-fluid rounded mb-3 w-100" alt="Pizza Margarita">
+                    <p>Nuestra pizza Margarita está hecha con una base de masa artesanal, salsa de tomate casera, mozzarella fresca y albahaca, horneada a la perfección para un sabor auténtico.</p>
+                    <p><strong>Precio:</strong> $10.500</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pizzaFugazzetaModal" tabindex="-1" aria-labelledby="pizzaFugazzetaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pizzaFugazzetaModalLabel">Pizza Fugazzeta</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pizza-fugazzeta.jpeg" class="img-fluid rounded mb-3 w-100" alt="Pizza Fugazzeta">
+                    <p>Clásica receta argentina rellena con abundante queso mozzarella de primera calidad, coronada con cebollas dulces doradas al horno, orégano y un toque de aceite de oliva.</p>
+                    <p><strong>Precio:</strong> $11.800</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pizzaSalameModal" tabindex="-1" aria-labelledby="pizzaSalameModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pizzaSalameModalLabel">Pizza de Salame</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pizza-salame.jpeg" class="img-fluid rounded mb-3 w-100" alt="Pizza de Salame">
+                    <p>Pizza a la piedra con auténtica salsa pomodoro, cubierta con generosa mozzarella gratinada y finas rodajas de salame seleccionadas que le dan un toque crujiente e intenso.</p>
+                    <p><strong>Precio:</strong> $12.500</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales Hamburguesas -->
+    <div class="modal fade" id="hamburguesaSimpleModal" tabindex="-1" aria-labelledby="hamburguesaSimpleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hamburguesaSimpleModalLabel">Hamburguesa Simple</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/hamburguesa-simple.jpeg" class="img-fluid rounded mb-3 w-100" alt="Hamburguesa Simple">
+                    <p>Medallón de carne vacuna seleccionada a la plancha, queso fundido, lechuga fresca y rodajas de tomate en pan brioche artesanal ligeramente tostado.</p>
+                    <p><strong>Precio:</strong> $11.000</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hamburguesaDobleModal" tabindex="-1" aria-labelledby="hamburguesaDobleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hamburguesaDobleModalLabel">Hamburguesa Doble Cheddar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/hamburguesa-doble.jpeg" class="img-fluid rounded mb-3 w-100" alt="Hamburguesa Doble Cheddar">
+                    <p>Doble medallón de carne smash de 120g cada uno, 4 fetas de queso cheddar derretido, panceta crujiente y pan de papa con manteca.</p>
+                    <p><strong>Precio:</strong> $14.500</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="hamburguesaModal" tabindex="-1" aria-labelledby="hamburguesaModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="hamburguesaModalLabel">Hamburguesa Especial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/hamburguesa.png" class="img-fluid rounded mb-3 w-100" alt="Hamburguesa Especial">
+                    <p>Nuestra hamburguesa especial de la casa lleva medallón de carne vacuna a la parrilla, queso cheddar derretido, cebolla caramelizada, lechuga fresca y salsa especial.</p>
+                    <p><strong>Precio:</strong> $12.500</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales Pastas -->
+    <div class="modal fade" id="pastaNoquisModal" tabindex="-1" aria-labelledby="pastaNoquisModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pastaNoquisModalLabel">Ñoquis Caseros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pasta-ñoquis.jpeg" class="img-fluid rounded mb-3 w-100" alt="Ñoquis Caseros">
+                    <p>Auténticos ñoquis de papa elaborados a mano según la tradición familiar, servidos con salsa pomodoro casera, un toque de oliva y abundante queso rallado.</p>
+                    <p><strong>Precio:</strong> $9.500</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pastaRaviolesModal" tabindex="-1" aria-labelledby="pastaRaviolesModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pastaRaviolesModalLabel">Ravioles Caseros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pasta-ravioles.jpeg" class="img-fluid rounded mb-3 w-100" alt="Ravioles Caseros">
+                    <p>Ravioles elaborados a mano rellenos de ricota fresca de campo y espinaca seleccionada, servidos con salsa pomodoro natural y hojas de albahaca.</p>
+                    <p><strong>Precio:</strong> $9.800</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="pastaModal" tabindex="-1" aria-labelledby="pastaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pastaModalLabel">Pasta Alfredo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/pasta.jpg" class="img-fluid rounded mb-3 w-100" alt="Pasta Alfredo">
+                    <p>Nuestra pasta Alfredo está hecha con fettuccine al dente, una cremosa salsa Alfredo elaborada con mantequilla, crema y queso parmesano, decorada con perejil fresco.</p>
+                    <p><strong>Precio:</strong> $9.000</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-danger">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-danger text-white text-center py-4 mt-5">
+        <div class="container">
+            <h5 class="text-white mb-1">Tienda Delb</h5>
+            <p class="mb-2">La mejor calidad y sabor, directo a tu mesa.</p>
+            <small class="text-white-50">
+                &copy; 2026 Grupo 1 Damián y Ludmila
+            </small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
