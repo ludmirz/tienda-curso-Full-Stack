@@ -12,3 +12,25 @@
     max-height: 280px;
     object-fit: cover;
 }
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.dropdown-item:active,
+.dropdown-item.active {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.dropdown-item-highlight {
+    color: #dc3545; /* letra roja en reposo */
+}
+
+.dropdown-item-highlight:hover,
+.dropdown-item-highlight:focus {
+    background-color: #dc3545;
+    color: #fff; /* letra blanca cuando el fondo se pone rojo */
+}
