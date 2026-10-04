@@ -36,3 +36,19 @@
     color: #fff;
     /* letra blanca cuando el fondo se pone rojo */
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: none;
+    opacity: 0.3;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0.5) grayscale(100);
+}
