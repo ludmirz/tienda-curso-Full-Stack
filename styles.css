@@ -26,11 +26,29 @@
 }
 
 .dropdown-item-highlight {
-    color: #dc3545; /* letra roja en reposo */
+    color: #dc3545;
+    /* letra roja en reposo */
 }
 
 .dropdown-item-highlight:hover,
 .dropdown-item-highlight:focus {
     background-color: #dc3545;
-    color: #fff; /* letra blanca cuando el fondo se pone rojo */
+    color: #fff;
+    /* letra blanca cuando el fondo se pone rojo */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: none;
+    opacity: 0.3;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(0.5) grayscale(100);
 }
