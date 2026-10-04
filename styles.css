@@ -26,11 +26,13 @@
 }
 
 .dropdown-item-highlight {
-    color: #dc3545; /* letra roja en reposo */
+    color: #dc3545;
+    /* letra roja en reposo */
 }
 
 .dropdown-item-highlight:hover,
 .dropdown-item-highlight:focus {
     background-color: #dc3545;
-    color: #fff; /* letra blanca cuando el fondo se pone rojo */
+    color: #fff;
+    /* letra blanca cuando el fondo se pone rojo */
 }
